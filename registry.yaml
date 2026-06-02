@@ -1,0 +1,77 @@
+registry_version: "1.0.0"
+mode: "local-first"
+architecture: "provider-neutral"
+last_synced: null
+skills:
+  - name: skillx-planner
+    tier: planning
+    path: shared/planning/skillx-planner
+    description: "Decomposes user objectives into structured task ledgers before execution."
+    trust_tier: T1
+    status: active
+  - name: provider-router
+    tier: functional
+    path: shared/functional/provider-router
+    description: "Selects model providers by task role without vendor lock-in."
+    trust_tier: T2
+    status: active
+  - name: mcp-router
+    tier: functional
+    path: shared/functional/mcp-router
+    description: "Routes tool access through configured MCP servers."
+    trust_tier: T2
+    status: active
+  - name: adapter-sync-manager
+    tier: functional
+    path: shared/functional/adapter-sync-manager
+    description: "Compiles universal skills into host-specific adapter wrappers."
+    trust_tier: T2
+    status: active
+  - name: system-audit
+    tier: atomic
+    path: shared/atomic/system-audit
+    description: "Runs a safe read-only audit of the current project directory."
+    trust_tier: T1
+    status: active
+  - name: security-gatekeeper
+    tier: governance
+    path: shared/governance/security-gatekeeper
+    description: "Applies G1-G4 verification gates before execution."
+    trust_tier: T4
+    status: active
+  - name: semantic-deduplicator
+    tier: governance
+    path: shared/governance/semantic-deduplicator
+    description: "Prevents duplicate or near-duplicate skills."
+    trust_tier: T2
+    status: active
+  - name: seagent-discoverer
+    tier: acquisition
+    path: shared/acquisition/seagent-discoverer
+    description: "Discovers missing capabilities from failed workflows."
+    trust_tier: T3
+    status: active
+  - name: skill-creator
+    tier: acquisition
+    path: shared/acquisition/skill-creator
+    description: "Creates new SKILL.md packages after checks."
+    trust_tier: T3
+    status: active
+  - name: automatic-curriculum-manager
+    tier: acquisition
+    path: shared/acquisition/automatic-curriculum-manager
+    description: "Proposes capability-building tasks from coverage and failure history."
+    trust_tier: T2
+    status: active
+  - name: eval-harness-architect
+    tier: evaluation
+    path: shared/evaluation/eval-harness-architect
+    description: "Builds and runs binary evals for skills and scripts."
+    trust_tier: T2
+    status: active
+  - name: multi-model-consensus-auditor
+    tier: evaluation
+    path: shared/evaluation/multi-model-consensus-auditor
+    description: "Uses a separate critic provider to review high-impact changes."
+    trust_tier: T3
+    status: active

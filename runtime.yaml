@@ -1,0 +1,21 @@
+mode: local-first
+active_host: custom-python
+hosts:
+  custom-python: { enabled: true, adapter_path: adapters/custom-python }
+  opencode: { enabled: false, adapter_path: adapters/opencode }
+  claude-code: { enabled: false, adapter_path: adapters/claude-code }
+  cursor: { enabled: false, adapter_path: adapters/cursor }
+  chatgpt: { enabled: false, adapter_path: adapters/chatgpt }
+  gemini: { enabled: false, adapter_path: adapters/gemini }
+  hermes: { enabled: false, adapter_path: adapters/hermes }
+execution_policy:
+  require_planning: true
+  require_security_gate: true
+  block_sudo: true
+  block_destructive_shell: true
+  require_human_approval_for_t4: true
+  prefer_sandbox: true
+memory:
+  learnings_file: learnings.md
+  task_ledger: harness/memory/prd.json
+  sqlite_graph: harness/memory/agent_graph.db

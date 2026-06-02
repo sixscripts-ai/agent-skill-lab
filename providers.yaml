@@ -1,0 +1,13 @@
+default_provider: local
+default_model: none
+roles:
+  planner: { provider: local, model: none }
+  executor: { provider: local, model: none }
+  critic: { provider: local, model: none }
+  researcher: { provider: local, model: none }
+providers:
+  local: { enabled: true, runtime: deterministic }
+  openai: { enabled: false, env_key: OPENAI_API_KEY }
+  anthropic: { enabled: false, env_key: ANTHROPIC_API_KEY }
+  gemini: { enabled: false, env_key: GEMINI_API_KEY }
+  ollama: { enabled: false, base_url: "http://127.0.0.1:11434" }

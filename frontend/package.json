@@ -1,23 +1,29 @@
 {
-  "name": "ai-agent-skill-registry-frontend",
+  "name": "frontend",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite --port 3000",
+    "build": "tsc -b && vite build"
   },
   "dependencies": {
-    "react": "latest",
-    "react-dom": "latest",
-    "@google/genai": "latest",
-    "lucide-react": "latest"
+    "@google/genai": "^2.7.0",
+    "@tanstack/react-query": "^5.90.20",
+    "@tanstack/react-router": "^1.158.1",
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@vitejs/plugin-react": "latest",
-    "typescript": "latest",
-    "vite": "latest"
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/node": "^25.3.0",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.3",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.0.5"
   }
 }

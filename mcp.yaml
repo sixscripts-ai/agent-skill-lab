@@ -1,0 +1,28 @@
+mcp_servers:
+  filesystem:
+    enabled: true
+    purpose: "Read and write within approved directories."
+    trust_tier: T2
+    scope: ["~/ai-skills"]
+  git:
+    enabled: true
+    purpose: "Inspect diffs, commits, branches, and repo state."
+    trust_tier: T2
+  github:
+    enabled: false
+    purpose: "Remote repository, issues, PRs, and releases."
+    trust_tier: T3
+    env_key: GITHUB_TOKEN
+  search:
+    enabled: false
+    purpose: "Live docs and web research."
+    trust_tier: T3
+    env_key: SEARCH_API_KEY
+  sqlite:
+    enabled: true
+    purpose: "Structured memory and skill graph queries."
+    trust_tier: T2
+  browser:
+    enabled: false
+    purpose: "Controlled browser automation."
+    trust_tier: T3
